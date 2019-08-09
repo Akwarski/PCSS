@@ -12,6 +12,7 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_child.view.*
 import androidx.core.view.isVisible
+import kotlinx.android.synthetic.main.list_parent.view.*
 import java.lang.Exception
 
 
@@ -40,8 +41,9 @@ class ExpandableListViewAdapter(private val context: Context, private var identi
             convertView = inflater.inflate(akwarski.pcss.R.layout.list_parent, null)
         }
         //set text all of group name
-        val title = convertView!!.findViewById<TextView>(akwarski.pcss.R.id.title)
-        title.text = getGroup(p0)
+        //val title = convertView!!.findViewById<TextView>(akwarski.pcss.R.id.title)
+        convertView!!.title.text = getGroup(p0)
+        //title.text = getGroup(p0)
         return convertView
     }
 

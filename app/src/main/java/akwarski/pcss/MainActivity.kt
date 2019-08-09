@@ -52,8 +52,6 @@ class MainActivity : AppCompatActivity() {
                 wait
             )
         }
-
-
     }
 
     //load data from specific API using retrofit
@@ -71,8 +69,6 @@ class MainActivity : AppCompatActivity() {
                 //visible text or list depend on internet connection
                 noInternet.isVisible = false
                 expandedListView.isVisible = true
-                //adding all object
-                //pictures.addAll(response.body()!!)
                 //foreach to search all object
                 for(item in response.body()!!){
                     // -1 because empty list return -1
